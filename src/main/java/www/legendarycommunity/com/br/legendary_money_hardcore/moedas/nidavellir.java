@@ -37,7 +37,7 @@ public class nidavellir implements CommandExecutor, Listener {
                 sender.sendMessage(ChatColor.RED + "Jogador não encontrado ou offline.");
             }
 
-            Inventory legendaryMenu = Bukkit.createInventory(null, 27, ChatColor.GOLD + "Hardcore Bank");
+            Inventory legendaryMenu = Bukkit.createInventory(null, 27, ChatColor.GOLD + "Nidavellir Bank");
 
             ItemStack spectateItem = new ItemStack(Material.PAPER);
             ItemMeta spectateMeta = spectateItem.getItemMeta();
@@ -588,7 +588,7 @@ public class nidavellir implements CommandExecutor, Listener {
 
     @EventHandler
     public void onInventoryClick(InventoryClickEvent event) {
-        if (event.getView().getTitle().equals(ChatColor.GOLD + "Hardcore Bank")) {
+        if (event.getView().getTitle().equals(ChatColor.GOLD + "Nidavellir Bank")) {
             event.setCancelled(true); // Impede qualquer modificação no inventário
             Player player = (Player) event.getWhoClicked();
             int slot = event.getSlot();
